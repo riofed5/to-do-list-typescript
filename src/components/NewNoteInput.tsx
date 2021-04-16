@@ -12,13 +12,14 @@ const NewNoteInput: React.FC<NewNoteInputProps> = ({ addNote }) => {
   };
 
   const onAddNoteClick = () => {
-    addNote(note);
     setNote("");
+    addNote(note);
   };
   return (
     <div>
       <input
         onChange={updateNote}
+        value={note}
         type="text"
         name="note"
         placeholder="type something"

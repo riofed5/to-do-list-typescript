@@ -8,12 +8,13 @@ module.exports = merge(common, {
   mode: "development",
   target: "web",
   devServer: {
+    host: "0.0.0.0",
+    port: 9000,
     stats: "minimal",
     overlay: true,
     historyApiFallback: true,
     disableHostCheck: true,
     headers: { "Access-Control-Allow-Origin": "*" },
     https: false,
-    port: 9000,
   },
 });
